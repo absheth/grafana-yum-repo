@@ -20,6 +20,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} -d -p %{buildroot}/etc/yum.repos.d
 
 %{__install} etc/yum.repos.d/grafana.repo %{buildroot}/etc/yum.repos.d/grafana.repo
+%{__install} etc/yum.repos.d/globalnoc.repo %{buildroot}/etc/yum.repos.d/globalnoc.repo
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -28,6 +29,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 /etc/yum.repos.d/grafana.repo
+/etc/yum.repos.d/globalnoc.repo
 %doc
 
 %post
